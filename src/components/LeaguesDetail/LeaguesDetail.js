@@ -12,9 +12,11 @@ const LeaguesDetail = () => {
       .then((data) => setLeagueInfo(data.leagues[0]));
   }, [leagueId]);
   return (
-    <div>
-      <img src={leagueInfo.strBanner} alt="" />
-      {<LeagueInfo leagueInfo={leagueInfo}></LeagueInfo>}
+    <div className="container">
+      <img className="container" src={leagueInfo.strBanner} alt="" />
+      <div className="container">
+        {<LeagueInfo leagueInfo={leagueInfo}></LeagueInfo>}
+      </div>
     </div>
   );
 };
