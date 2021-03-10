@@ -1,3 +1,5 @@
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useHistory } from "react-router";
 
@@ -16,7 +18,7 @@ const Leagues = (props) => {
         <h4>{strLeague}</h4>
         <p>Sports Type: {strSport}</p>
         <button onClick={handleExplore} className="btn btn-primary">
-          Explore
+          Explore <FontAwesomeIcon icon={faArrowRight} />
         </button>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Header from "../Header/Header";
 import Leagues from "../Leagues/Leagues";
 
 const Home = () => {
@@ -11,12 +12,15 @@ const Home = () => {
   }, []);
   const first15 = leagues.slice(0, 12);
   return (
-    <div className="row ">
-      <div className="col-md-12 justify-content-center">
-        <div className="row justify-content-center">
-          {first15.map((league) => (
-            <Leagues key={league.idLeague} league={league}></Leagues>
-          ))}
+    <div>
+      <Header />
+      <div className="row ">
+        <div className="col-md-12 justify-content-center">
+          <div className="row justify-content-center">
+            {first15.map((league) => (
+              <Leagues key={league.idLeague} league={league}></Leagues>
+            ))}
+          </div>
         </div>
       </div>
     </div>

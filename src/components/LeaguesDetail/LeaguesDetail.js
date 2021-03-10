@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import LeagueInfo from "../LeagueInfo/LeagueInfo";
+import "./LeaguesDetail.css";
 
 const LeaguesDetail = () => {
   const { leagueId } = useParams();
@@ -12,10 +13,16 @@ const LeaguesDetail = () => {
       .then((data) => setLeagueInfo(data.leagues[0]));
   }, [leagueId]);
   return (
-    <div className="container">
-      <img className="container" src={leagueInfo.strBanner} alt="" />
+    <div className="">
+      <div className="row banner">
+        <img
+          className="badgeStyle mx-auto d-block"
+          src={leagueInfo.strBadge}
+          alt=""
+        />
+      </div>
       <div className="container">
-        {<LeagueInfo leagueInfo={leagueInfo}></LeagueInfo>}
+        <LeagueInfo leagueInfo={leagueInfo}></LeagueInfo>
       </div>
     </div>
   );

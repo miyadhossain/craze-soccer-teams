@@ -5,7 +5,9 @@ import FoundImg from "../../Icon/found.png";
 import GenderIcon from "../../Icon/male-gender.png";
 import GenderImg from "../../images/male.png";
 import LeagueInfoDetail from "../LeagueInfoDetail/LeagueInfoDetail";
+import SocialLink from "../SocialLink/SocialLink";
 import "./LeagueInfo.css";
+
 const LeagueInfo = (props) => {
   //   console.log(props);
   const {
@@ -54,6 +56,7 @@ const LeagueInfo = (props) => {
       <div className="mt-3">
         <LeagueInfoDetail />
       </div>
+      <SocialLink />
     </div>
   );
 };
