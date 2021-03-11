@@ -9,28 +9,15 @@ import { useParams } from "react-router";
 import "./SocialLink.css";
 
 const SocialLink = () => {
-  const { leagueId } = useParams();
+  const { teamId } = useParams();
   const [link, setLink] = useState([]);
   useEffect(() => {
-    const url = `https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id=${leagueId}`;
+    const url = `https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${teamId}`;
     fetch(url)
       .then((res) => res.json())
-      .then((data) => setLink(data.leagues[0]));
-  }, [leagueId]);
+      .then((data) => setLink(data.teams[0]));
+  }, [teamId]);
   return (
-    // <div class="social-container">
-    //   <h3>Social Follow</h3>
-    //   <a href={`https://${link.strTwitter}`} className="twitter social">
-    //     <FontAwesomeIcon icon={faTwitter} size="2x" />
-    //   </a>
-    //   <a href={`https://${link.strFacebook}`} className="facebook social">
-    //     <FontAwesomeIcon icon={faFacebook} size="2x" />
-    //   </a>
-    //   <a href={`https://${link.strYoutube}`} className="youtube social">
-    //     <FontAwesomeIcon icon={faYoutube} size="2x" />
-    //   </a>
-    // </div>
-
     <div className="text-center">
       <a
         className="social text-primary m-2"

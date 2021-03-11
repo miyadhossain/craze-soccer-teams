@@ -2,8 +2,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home/Home";
-import LeaguesDetail from "./components/LeaguesDetail/LeaguesDetail";
 import NoMatch from "./components/NoMatch/NoMatch";
+import TeamsDetail from "./components/TeamsDetail/TeamsDetail";
 
 function App() {
   return (
@@ -16,8 +16,8 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/league/:leagueId">
-            <LeaguesDetail />
+          <Route path="/team/:teamId">
+            <TeamsDetail />
           </Route>
           <Route path="*">
             <NoMatch />

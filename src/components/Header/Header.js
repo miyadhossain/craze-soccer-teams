@@ -4,7 +4,7 @@ import "./Header.css";
 const Header = () => {
   return (
     <div className="row header justify-content-center align-items-center">
-      <h3 className="text-center">Super Leagues</h3>
+      <h1 className="text-center">Super Soccer Teams</h1>
     </div>
   );
 };
