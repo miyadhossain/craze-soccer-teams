@@ -12,6 +12,7 @@ const Teams = (props) => {
     const url = `team/${idTeam}`;
     history.push(url);
   };
+
   return (
     <div className="card" style={{ width: "18rem", margin: "30px" }}>
       <img

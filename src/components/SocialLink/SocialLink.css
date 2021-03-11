@@ -1,6 +1,0 @@
-.social {
-  transition: transform 250ms;
-}
-.social:hover {
-  transform: translateY(-4px);
-}
